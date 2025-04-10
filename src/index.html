@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Family Tree</title>
+    <!-- D3.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/family-tree.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Interactive Family Network Visualization</h1>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #AADDFF;"></div>
+                <span>Male</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #FFAABB;"></div>
+                <span>Female</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #FFCC99;"></div>
+                <span>Spouse</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #AAFFAA;"></div>
+                <span>Child</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #DDDDFF;"></div>
+                <span>Sibling</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #F0E68C;"></div>
+                <span>Parent</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search by name...">
+            <button id="search-btn">Search</button>
+            <select id="center-person">
+                <option value="">Select a person...</option>
+            </select>
+            <button id="reset-btn">Reset View</button>
+            <button id="expand-all-btn">Expand All</button>
+            <button id="collapse-all-btn">Collapse All</button>
+        </div>
+
+        <div id="family-chart"></div>
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/family-tree.js"></script>
+</body>
+
+</html>

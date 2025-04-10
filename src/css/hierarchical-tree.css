@@ -1,0 +1,267 @@
+/* Main container styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Search container */
+.search-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#search-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#search-btn:hover {
+    background-color: #45a049;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 70%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: none;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-result-item .name {
+    font-weight: bold;
+}
+
+.search-result-item .info {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 3px;
+}
+
+/* Family tree container */
+#family-tree-container {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#family-tree {
+    width: 100%;
+    height: 700px;
+    overflow: auto;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #333;
+}
+
+.color-box.male {
+    background-color: #AADDFF;
+}
+
+.color-box.female {
+    background-color: #FFAABB;
+}
+
+.color-box.parent {
+    background-color: #F0E68C;
+}
+
+.color-box.spouse {
+    background-color: #FFCC99;
+}
+
+.color-box.child {
+    background-color: #AAFFAA;
+}
+
+.color-box.sibling {
+    background-color: #DDDDFF;
+}
+
+/* Node styles */
+.node {
+    cursor: pointer;
+}
+
+.node rect {
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.node.highlighted rect {
+    stroke: #FF0000;
+    stroke-width: 3px;
+}
+
+.link {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+/* Context menu */
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.context-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.context-menu li {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.context-menu li:last-child {
+    border-bottom: none;
+}
+
+.context-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Person node tooltip */
+.tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    font-size: 12px;
+    max-width: 200px;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+.tooltip .info-row {
+    margin-top: 2px;
+    display: flex;
+}
+
+.tooltip .label {
+    font-weight: bold;
+    margin-right: 5px;
+    min-width: 70px;
+}
+
+/* Expand indicator */
+.expand-indicator {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    fill: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #search-input {
+        width: 60%;
+    }
+
+    .search-results {
+        width: 60%;
+    }
+
+    #family-tree {
+        height: 500px;
+    }
+
+    .legend {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

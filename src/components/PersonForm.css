@@ -1,0 +1,73 @@
+/* src/components/PersonForm.css */
+.person-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.person-form h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #3f51b5;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.error {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 0.25rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submit-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #303f9f;
+}
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    color: #666;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchical Family Tree</title>
+    <!-- D3.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/hierarchical-tree.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hierarchical Family Network</h1>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by name...">
+            <button id="search-btn">Search</button>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div id="family-tree-container">
+            <div id="context-menu" class="context-menu">
+                <ul>
+                    <li id="expand-parents">Expand Parents</li>
+                    <li id="expand-spouse">Expand Spouse</li>
+                    <li id="expand-children">Expand Children</li>
+                    <li id="expand-siblings">Expand Siblings</li>
+                    <li id="expand-all">Expand All</li>
+                    <li id="collapse">Collapse</li>
+                    <li id="make-root">Make Root</li>
+                </ul>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="color-box male"></div> Male
+                </div>
+                <div class="legend-item">
+                    <div class="color-box female"></div> Female
+                </div>
+                <div class="legend-item">
+                    <div class="color-box parent"></div> Parent
+                </div>
+                <div class="legend-item">
+                    <div class="color-box spouse"></div> Spouse
+                </div>
+                <div class="legend-item">
+                    <div class="color-box child"></div> Child
+                </div>
+                <div class="legend-item">
+                    <div class="color-box sibling"></div> Sibling
+                </div>
+            </div>
+            <div id="family-tree"></div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/hierarchical-tree.js"></script>
+</body>
+
+</html>
